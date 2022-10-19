@@ -73,6 +73,12 @@ body{
 }
 
 #graphicForm{
-    height: 350px;
+    height: 250px;
+}
+
+/* svg */
+.bi{
+    height: 30px !important;
+    width: 30px !important;
 }
 
