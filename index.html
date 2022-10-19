@@ -5,7 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Regform</title>
+    <title>Gambea | Registration Form</title>
+    <!-- icon -->
+    <link rel="shortcut icon" type="x-icon" href="img/logo.png" />
     <!-- css -->
     <link rel="stylesheet" href="style.css" />
     <!-- Bootstrap CSS -->
@@ -18,9 +20,45 @@
   </head>
 
   <body>
+    <!-- nav bar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a href="#">
+          <!-- logo in nav bar -->
+          <img id="logo" src="img/logo.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-row" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="text-white nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-white nav-link" href="#sectionAbout">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-white nav-link" href="index2.html">Developers</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav bar -->
     <!--  -->
     <div class="regContainer">
-      <div class="titleForm"><h4>E-GAMES ORGANIZATION</h4></div>
+      <div class="titleForm">
+        <h5 id="titleFormTxt">REGISTRATION FORM</h5>
+      </div>
       <div class="container text-center">
         <div class="row">
           <div class="col">
@@ -59,7 +97,7 @@
                             <input
                               type="text"
                               id="form3Example1m"
-                              class="form-control form-control-lg"
+                              class="form-control form-control"
                             />
                             <label class="form-label" for="form3Example1m"
                               >First name</label
@@ -71,7 +109,7 @@
                             <input
                               type="text"
                               id="form3Example1n"
-                              class="form-control form-control-lg"
+                              class="form-control form-control"
                             />
                             <label class="form-label" for="form3Example1n"
                               >Last name</label
@@ -86,7 +124,7 @@
                             <input
                               type="text"
                               id="form3Example1m1"
-                              class="form-control form-control-lg"
+                              class="form-control form-control"
                             />
                             <label class="form-label" for="form3Example1m1"
                               >Student Number</label
@@ -128,7 +166,7 @@
                         <input
                           type="text"
                           id="form3Example8"
-                          class="form-control form-control-lg"
+                          class="form-control form-control"
                         />
                         <label class="form-label" for="form3Example8"
                           >Address</label
@@ -149,7 +187,7 @@
                             value="option1"
                           />
                           <label class="form-check-label" for="femaleGender"
-                            >Female</label
+                            >Male</label
                           >
                         </div>
 
@@ -162,7 +200,7 @@
                             value="option2"
                           />
                           <label class="form-check-label" for="maleGender"
-                            >Male</label
+                            >Female</label
                           >
                         </div>
 
@@ -181,13 +219,10 @@
                       </div>
 
                       <div class="d-flex justify-content-end pt-3">
-                        <button type="button" class="btn btn-light btn-lg">
+                        <button type="button" class="btn btn-light btn">
                           Reset all
                         </button>
-                        <button
-                          type="button"
-                          class="btn btn-warning btn-lg ms-2"
-                        >
+                        <button type="button" class="btn btn-warning btn ms-2">
                           Next
                         </button>
                       </div>
@@ -201,7 +236,18 @@
       </div>
     </div>
 
-    <div class="creditsContainer">NULL NULL NULL</div>
+    <div class="creditsContainer">
+      <div class="row">
+        <div class="col">
+          <img id="logoCredits" src="/img/logo.png" alt="" />
+          <p id="copyrightsCredits">© 2022 Gambea. All rights reserved.</p>
+        </div>
+        <div class="col">
+          <p>Developers:</p>
+          <p>Dylann Esteban | Shaira Pagaduan | Andre Lacra</p>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
