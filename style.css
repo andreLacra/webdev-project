@@ -1,6 +1,7 @@
 body{
-    background: url(/img/background-blue1.jpg) no-repeat;
+    background: url(/img/background-blue2.jpg) no-repeat;
     background-size: cover;
+    background-size: 100% 100%;
 
 }
 /* .ok{
@@ -9,26 +10,23 @@ body{
 
 .regContainer{
     background-color: white;
-    /* height: 500px; */
-    width: 600px;
+    width: 60%;
     border-radius: 5px;
     margin: auto;
     margin-top: 3%;
 
 }
 
-#regContainer{
-    background-color: white;
-    height: 90%;
-    width: 40%;
-    border-radius: 5px;
-}
 .titleForm{
     padding: 10px;
     color: white;
     background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    text-align: center;
+}
+
+#personalInformationTxt{
     text-align: center;
 }
 
@@ -41,10 +39,10 @@ body{
     background-color: white;
     padding: 30px;
     text-align: start;
-    margin-top: 3%;
+    margin-top: 10%;
 }
 
-.dropdown{
-    border: 1px;
-    /* color: blue !important; */
+#graphicForm{
+    height: 350px;
 }
+
