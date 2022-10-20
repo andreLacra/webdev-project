@@ -42,11 +42,12 @@ body{
 }
 
 #titleFormTxt{
-    margin-top: 1%;
+    /* margin-top: 1%;
     background: -webkit-linear-gradient(300deg, #93f5ec 20%, #eaa360 70%);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    color: white;
 }
 
 #personalInformationTxt{
