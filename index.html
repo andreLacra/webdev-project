@@ -15,7 +15,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body onload="document.personalInformation.firstNameInput.focus();">
+  <body onload="document.personalInformation.firstName.focus();">
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
@@ -89,7 +89,7 @@
         <div class="form_1 data_info">
           <h4>Personal Information</h4>
           <form
-            onsubmit="event.preventDefault(); formValidation1();"
+            onsubmit="return formValidation1()"
             id="form1"
             name="personalInformation"
           >
@@ -191,7 +191,11 @@
         </div>
         <div class="form_3 data_info" style="display: none">
           <h4>Social Media</h4>
-          <form>
+          <form
+            onsubmit="event.preventDefault(); formValidation3();"
+            id="form3"
+            name="socialMedia"
+          >
             <div class="form_container">
               <div class="input_wrap">
                 <label for="company">Facebook Link</label>
@@ -214,7 +218,11 @@
         </div>
         <div class="form_4 data_info" style="display: none">
           <h4>Emergency Contacts</h4>
-          <form>
+          <form
+            onsubmit="event.preventDefault(); formValidation4();"
+            id="form4"
+            name="emeegencyContacts"
+          >
             <div class="form_container">
               <div class="input_wrap">
                 <label for="company">Name</label>
@@ -246,7 +254,11 @@
         </div>
         <div class="form_5 data_info" style="display: none">
           <h4>Membership Type</h4>
-          <form>
+          <form
+            onsubmit="event.preventDefault(); formValidation5();"
+            id="form5"
+            name="membershipType"
+          >
             <div class="form_container">
               <div class="input_wrap">
                 <div class="form-group-contact">
@@ -276,7 +288,11 @@
         </div>
         <div class="form_6 data_info" style="display: none">
           <h4>Terms and Condition</h4>
-          <form>
+          <form
+            onsubmit="event.preventDefault(); formValidation1();"
+            id="form"
+            name="termsConditions"
+          >
             <div class="form_container">
               <div class="input_wrap">
                 <p>Welcome to Gambea!</p>

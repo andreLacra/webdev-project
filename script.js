@@ -1,24 +1,3 @@
-// function formValidation1() {
-//   var firstNameInput = document.personalInformation.firstName;
-//   var lastNameInput = document.personalInformation.lastName;
-//   var studentNumberInput = document.personalInformation.studentNumber;
-//   var gender = document.personalInformation.gender;
-//   var courses = document.personalInformation.courses;
-//   var yearLevel = document.personalInformation.yearLevel;
-
-//     if (allLetter(firstNameInput, lastNameInput)) {
-//       if (allnumeric(studentNumberInput)) {
-//         if (validSex(gender)) {
-//           if (validCourses(courses)) {
-//             if (validYearLevel(yearLevel)) {
-//             }
-//           }
-//         }
-//       }
-//     }
-//     return false;
-// }
-
 var form_1 = document.querySelector(".form_1");
 var form_2 = document.querySelector(".form_2");
 var form_3 = document.querySelector(".form_3");
@@ -54,131 +33,153 @@ var btn_done = document.querySelector(".btn_done");
 var modal_wrapper = document.querySelector(".modal_wrapper");
 var shadow = document.querySelector(".shadow");
 
-function formValidation1() {
-  var firstNameInput = document.personalInformation.firstName;
-  var lastNameInput = document.personalInformation.lastName;
-  var studentNumberInput = document.personalInformation.studentNumber;
-  var gender = document.personalInformation.gender;
-  var courses = document.personalInformation.courses;
-  var yearLevel = document.personalInformation.yearLevel;
+// form_1_next_btn.addEventListener("click", function () {
+//   function formValidation1() {
+//     var firstNameInput = document.getElementsByName("firstName");
+//     var lastNameInput = document.getElementsByName("lastName");
+//     var studentNumberInput = document.getElementsByName("studentNumber");
+//     var gender = document.getElementsByName("gender");
+//     var courses = document.getElementsByName("courses");
+//     var yearLevel = document.getElementsByName("yearLevel");
 
-  form_1_next_btn.addEventListener("click", function () {
-    if (allLetter(firstNameInput, lastNameInput)) {
-      if (allnumeric(studentNumberInput)) {
-        if (validSex(gender)) {
-          if (validCourses(courses)) {
-            if (validYearLevel(yearLevel)) {
-              form_1.style.display = "none";
-              form_2.style.display = "block";
-              form_1_btns.style.display = "none";
-              form_2_btns.style.display = "flex";
-              form_2_progessbar.classList.add("active");
-            }
-          }
-        }
-      }
-    }
-    return false;
-  });
+//     if (allLetter(firstNameInput, lastNameInput)) {
+//       if (allnumeric(studentNumberInput)) {
+//         if (validSex(gender)) {
+//           if (validCourses(courses)) {
+//             if (validYearLevel(yearLevel)) {
+//               form_1.style.display = "none";
+//               form_2.style.display = "block";
+//               form_1_btns.style.display = "none";
+//               form_2_btns.style.display = "flex";
+//               form_2_progessbar.classList.add("active");
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// });
 
-  form_2_back_btn.addEventListener("click", function () {
-    form_1.style.display = "block";
-    form_2.style.display = "none";
+// function formValidation1() {
+//   var firstNameInput = document.getElementsByName("firstName");
+//   var lastNameInput = document.getElementsByName("lastName");
+//   var studentNumberInput = document.getElementsByName("studentNumber");
+//   var gender = document.getElementsByName("gender");
+//   var courses = document.getElementsByName("courses");
+//   var yearLevel = document.getElementsByName("yearLevel");
 
-    form_1_btns.style.display = "flex";
-    form_2_btns.style.display = "none";
+//   form_1_next_btn.addEventListener("click", function () {
+//     if (allnumeric(studentNumberInput)) {
+//       if (validSex(gender)) {
+//         if (validCourses(courses)) {
+//           if (validYearLevel(yearLevel)) {
+//             form_1.style.display = "none";
+//             form_2.style.display = "block";
+//             form_1_btns.style.display = "none";
+//             form_2_btns.style.display = "flex";
+//             form_2_progessbar.classList.add("active");
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-    form_2_progessbar.classList.remove("active");
-  });
+form_1_next_btn.addEventListener("click", function () {
+  form_1.style.display = "none";
+  form_2.style.display = "block";
+  form_1_btns.style.display = "none";
+  form_2_btns.style.display = "flex";
+  form_2_progessbar.classList.add("active");
+});
 
-  form_2_next_btn.addEventListener("click", function () {
-    form_2.style.display = "none";
-    form_3.style.display = "block";
+form_2_back_btn.addEventListener("click", function () {
+  form_1.style.display = "block";
+  form_2.style.display = "none";
+  form_1_btns.style.display = "flex";
+  form_2_btns.style.display = "none";
+  form_2_progessbar.classList.remove("active");
+});
 
-    form_3_btns.style.display = "flex";
-    form_2_btns.style.display = "none";
+form_2_next_btn.addEventListener("click", function () {
+  form_2.style.display = "none";
+  form_3.style.display = "block";
 
-    form_3_progessbar.classList.add("active");
-  });
+  form_3_btns.style.display = "flex";
+  form_2_btns.style.display = "none";
 
-  form_3_back_btn.addEventListener("click", function () {
-    form_2.style.display = "block";
-    form_3.style.display = "none";
+  form_3_progessbar.classList.add("active");
+});
 
-    form_3_btns.style.display = "none";
-    form_2_btns.style.display = "flex";
+form_3_back_btn.addEventListener("click", function () {
+  form_2.style.display = "block";
+  form_3.style.display = "none";
 
-    form_3_progessbar.classList.remove("active");
-  });
+  form_3_btns.style.display = "none";
+  form_2_btns.style.display = "flex";
 
-  form_3_next_btn.addEventListener("click", function () {
-    form_3.style.display = "none";
-    form_4.style.display = "block";
+  form_3_progessbar.classList.remove("active");
+});
 
-    form_4_btns.style.display = "flex";
-    form_3_btns.style.display = "none";
+form_3_next_btn.addEventListener("click", function () {
+  form_3.style.display = "none";
+  form_4.style.display = "block";
 
-    form_4_progessbar.classList.add("active");
-  });
+  form_4_btns.style.display = "flex";
+  form_3_btns.style.display = "none";
 
-  form_4_back_btn.addEventListener("click", function () {
-    form_3.style.display = "block";
-    form_4.style.display = "none";
+  form_4_progessbar.classList.add("active");
+});
 
-    form_4_btns.style.display = "none";
-    form_3_btns.style.display = "flex";
+form_4_back_btn.addEventListener("click", function () {
+  form_3.style.display = "block";
+  form_4.style.display = "none";
 
-    form_4_progessbar.classList.remove("active");
-  });
+  form_4_btns.style.display = "none";
+  form_3_btns.style.display = "flex";
 
-  form_4_next_btn.addEventListener("click", function () {
-    form_4.style.display = "none";
-    form_5.style.display = "block";
+  form_4_progessbar.classList.remove("active");
+});
 
-    form_5_btns.style.display = "flex";
-    form_4_btns.style.display = "none";
+form_4_next_btn.addEventListener("click", function () {
+  form_4.style.display = "none";
+  form_5.style.display = "block";
 
-    form_5_progessbar.classList.add("active");
-  });
+  form_5_btns.style.display = "flex";
+  form_4_btns.style.display = "none";
 
-  form_5_back_btn.addEventListener("click", function () {
-    form_4.style.display = "block";
-    form_5.style.display = "none";
+  form_5_progessbar.classList.add("active");
+});
 
-    form_5_btns.style.display = "none";
-    form_4_btns.style.display = "flex";
+form_5_back_btn.addEventListener("click", function () {
+  form_4.style.display = "block";
+  form_5.style.display = "none";
 
-    form_5_progessbar.classList.remove("active");
-  });
+  form_5_btns.style.display = "none";
+  form_4_btns.style.display = "flex";
 
-  form_5_next_btn.addEventListener("click", function () {
-    form_5.style.display = "none";
-    form_6.style.display = "block";
+  form_5_progessbar.classList.remove("active");
+});
 
-    form_6_btns.style.display = "flex";
-    form_5_btns.style.display = "none";
+form_5_next_btn.addEventListener("click", function () {
+  form_5.style.display = "none";
+  form_6.style.display = "block";
 
-    form_6_progessbar.classList.add("active");
-  });
+  form_6_btns.style.display = "flex";
+  form_5_btns.style.display = "none";
 
-  form_6_back_btn.addEventListener("click", function () {
-    form_5.style.display = "block";
-    form_6.style.display = "none";
+  form_6_progessbar.classList.add("active");
+});
 
-    form_6_btns.style.display = "none";
-    form_5_btns.style.display = "flex";
+form_6_back_btn.addEventListener("click", function () {
+  form_5.style.display = "block";
+  form_6.style.display = "none";
 
-    form_6_progessbar.classList.remove("active");
-  });
+  form_6_btns.style.display = "none";
+  form_5_btns.style.display = "flex";
 
-  btn_done.addEventListener("click", function () {
-    modal_wrapper.classList.add("active");
-  });
-
-  shadow.addEventListener("click", function () {
-    modal_wrapper.classList.remove("active");
-  });
-}
+  form_6_progessbar.classList.remove("active");
+});
 
 // check for all  letters input
 function allLetter(fname, lname) {
@@ -265,3 +266,11 @@ function validYearLevel(yearLevel) {
     return true;
   }
 }
+
+btn_done.addEventListener("click", function () {
+  modal_wrapper.classList.add("active");
+});
+
+shadow.addEventListener("click", function () {
+  modal_wrapper.classList.remove("active");
+});
